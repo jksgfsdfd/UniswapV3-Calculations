@@ -10,4 +10,8 @@ export function getPriceFromTick(
   return price;
 }
 
+export function getTickFromPrice(price: number): number {
+  return Math.floor(Math.log(Number(price)) / Math.log(1.0001));
+}
+
 //console.log(getPriceFromTick(201604, 6, 18));
